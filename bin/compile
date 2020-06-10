@@ -6,8 +6,10 @@ cd $1
 
 mkdir node_modules_backup
 mv node_modules/.bin node_modules_backup/
+mv node_modules/mjml node_modules_backup/
 cat .slugcleanup | xargs -I {} bash -c 'rm -rf {}'
 rm .slugcleanup
 rm -rf node_modules
 mkdir node_modules
 mv node_modules_backup/.bin node_modules/
+mv node_modules_backup/mjml node_modules/
